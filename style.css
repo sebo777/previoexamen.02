@@ -1,0 +1,178 @@
+:root {
+    --fondo-centro: #1a1230;
+    --fondo-borde: #0d0a17;
+    --fondo-header: #160f29;
+    --fondo-card: #0e0a16;
+    --dorado: #d4af37;
+    --crema: #f5e6b8;
+    --texto-suave: #9d94b5;
+}
+ 
+/* ===== General ===== */
+* {
+    box-sizing: border-box;
+}
+ 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+ 
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at 50% 30%, var(--fondo-centro) 0%, var(--fondo-borde) 75%);
+    background-attachment: fixed;
+    color: var(--crema);
+    margin: 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+ 
+/* ===== Header ===== */
+header {
+    background-color: var(--fondo-header);
+    padding: 30px 20px;
+    border-bottom: 4px solid var(--dorado);
+}
+ 
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+    color: var(--dorado);
+}
+ 
+header p {
+    margin: 0;
+    color: var(--texto-suave);
+}
+ 
+/* ===== Contenedor y card ===== */
+.contenedor {
+    flex: 1;
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+ 
+.card {
+    background-color: var(--fondo-card);
+    border: 3px solid var(--dorado);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+ 
+.card h2 {
+    margin-top: 0;
+    color: var(--dorado);
+}
+ 
+.card ul {
+    text-align: left;
+    display: inline-block;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+ 
+/* ===== Imagenes con marco ===== */
+.frame {
+    width: 80%;            /* se adapta al ancho del frame */
+    max-width: 160px;
+    height: auto;
+    border: 6px solid var(--dorado);
+    border-radius: 10px;
+    padding: 6px;
+    margin: 10px;
+    background-color: var(--fondo-header);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    transition: transform 0.3s;
+}
+ 
+.frame:hover {
+    transform: scale(1.08);
+}
+ 
+/* ===== Badge ===== */
+.badge-v1 {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 16px;
+    background-color: var(--dorado);
+    color: var(--fondo-borde);
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 20px;
+}
+ 
+/* ===== Boton volver ===== */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--dorado);
+    color: var(--fondo-borde);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+ 
+.boton:hover {
+    opacity: 0.85;
+}
+ 
+/* ===== Footer ===== */
+footer {
+    background-color: var(--fondo-header);
+    padding: 20px;
+    color: var(--texto-suave);
+    border-top: 2px solid var(--dorado);
+}
+ 
+footer p {
+    margin: 0;
+}
+ 
+/* ===== Telefono (pantallas de hasta 600px) ===== */
+@media (max-width: 600px) {
+    header {
+        padding: 20px 12px;
+    }
+ 
+    header h1 {
+        font-size: 1.6rem;
+    }
+ 
+    .contenedor {
+        margin: 12px auto;
+        padding: 0 12px;
+    }
+ 
+    .card {
+        padding: 18px 14px;
+        border-width: 2px;
+    }
+ 
+    .card h2 {
+        font-size: 1.45rem;
+        line-height: 1.25;
+    }
+ 
+    .card p {
+        font-size: 1.1rem;
+    }
+ 
+    .card ul {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        padding-left: 22px;
+    }
+ 
+    .frame {
+        border-width: 4px;
+        padding: 4px;
+        margin: 6px;
+    }
+}
+ 
